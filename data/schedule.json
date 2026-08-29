@@ -5,7 +5,7 @@
     "Tala": { "activity": "7th Grade Hickory Hills Volleyball", "summary": "7th-grade schedule is final. A-Team-only dates remain conditional until coaches make selections.", "tag": "7th grade confirmed", "sectionDescription": "A-Team-only events are retained but conditional until selections are announced." },
     "Kal": { "activity": "Mighty Mites Football", "summary": "Practice dates and game dates are known. Exact game times depend on team assignment.", "tag": "Health examination due Sep. 3", "sectionDescription": "All Springfield practices and games are at Allison Sports Town.", "note": "Saturday games may start between 8:30 AM and 1:00 PM in 30-minute increments. Exact team times are announced later." }
   },
-  "transportation": { "tala": "Morning practices are at Hickory Hills. Cynthia is expected to handle pickup and take Tala to school afterward. Athletes are required to ride the bus for games and tournaments unless administration approves otherwise. Current family understanding is that away teams return to Hickory Hills for authorized pickup." },
+  "transportation": { "tala": "Morning practices are at Hickory Hills. Cynthia is expected to handle pickup and take Tala to practice at the school. Tala will attend school afterward. Athletes are required to ride the bus for games and tournaments unless administration approves otherwise. Current family understanding is that away teams return to Hickory Hills for authorized pickup." },
   "conflictNotes": {
     "2026-09-08": { "severity": "critical", "text": "Three-way evening conflict." },
     "2026-09-10": { "severity": "critical", "text": "Three-way evening conflict." },

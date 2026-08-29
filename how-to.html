@@ -43,13 +43,15 @@
           <a class="button-link" href="https://docs.google.com/spreadsheets/d/1_U3u9AoElSN55an0hIUDIZ-WYu0smsCXKB_Rw_Hy_O8/edit" target="_blank" rel="noopener">Open editable Google Sheet</a>
         </div>
       </div>
-      <nav aria-label="How-to sections">
-        <a href="#change">Make a change</a>
-        <a href="#add">Add an event</a>
-        <a href="#statuses">Statuses</a>
-        <a href="#tala">Tala's A-Team</a>
-        <a href="#print">Print / PDF</a>
-        <a href="#help">If something looks wrong</a>
+      <nav aria-label="Schedule navigation">
+        <select aria-label="Menu" onchange="if(this.value) location.href=this.value">
+          <option value="" selected>Menu ▾</option>
+          <option value="index.html">Family Schedule</option>
+          <option value="lea.html">Lea</option>
+          <option value="tala.html">Tala</option>
+          <option value="kal.html">Kal</option>
+          <option value="how-to.html">How to Use</option>
+        </select>
       </nav>
     </header>
 

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Simple instructions for viewing and updating the Tago family sports schedule.">
+  <title>Family Sports Schedule — How To</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .hero .button-link { background: white; color: #2f5fd0; }
+    .hero .button-link:hover { background: #eef4ff; color: #244da9; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .button-link { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 10px 15px; border-radius: 10px; background: var(--accent); color: white; font-weight: 800; text-decoration: none; }
+    .button-link.secondary { background: var(--accent-soft); color: var(--accent); }
+    .button-link:hover { filter: brightness(.96); }
+    .steps { counter-reset: step; display: grid; gap: 12px; padding: 0 20px 20px; }
+    .step { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; }
+    .step::before { counter-increment: step; content: counter(step); display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: white; font-weight: 800; }
+    .step p { margin: 3px 0 0; }
+    .field-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 18px; margin: 12px 0 0; }
+    .field-list div { padding: 9px 0; border-top: 1px solid var(--line); }
+    .field-list dt { font-weight: 800; }
+    .field-list dd { margin: 2px 0 0; color: var(--muted); }
+    .callout { margin: 0 20px 20px; padding: 14px 16px; border-left: 4px solid var(--accent); border-radius: 10px; background: var(--accent-soft); }
+    .callout.warning { border-left-color: #d39b00; background: var(--warning); }
+    .link-card { display: flex; flex-direction: column; justify-content: space-between; gap: 14px; }
+    .link-card p { margin: 0; color: var(--muted); }
+    .link-card .button-link { align-self: flex-start; }
+    @media(max-width:820px) { .steps { padding: 0 15px 15px; } .callout { margin: 0 15px 15px; } .field-list { grid-template-columns: 1fr; } }
+    @media print { .button-link { color: var(--text); background: white; border: 1px solid var(--line); } a[href]::after { content: none; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="hero">
+        <div class="eyebrow hero-eyebrow">A quick family guide</div>
+        <h1>Family Sports Schedule — How To</h1>
+        <p>View the live schedule, make updates in the shared Google Sheet, and keep everyone on the same page.</p>
+        <div class="button-row">
+          <a class="button-link" href="https://rwfaught.github.io/Tago_Childrens_Sports_Schedule/">View live schedule</a>
+          <a class="button-link" href="https://docs.google.com/spreadsheets/d/1_U3u9AoElSN55an0hIUDIZ-WYu0smsCXKB_Rw_Hy_O8/edit" target="_blank" rel="noopener">Open editable Google Sheet</a>
+        </div>
+      </div>
+      <nav aria-label="How-to sections">
+        <a href="#change">Make a change</a>
+        <a href="#add">Add an event</a>
+        <a href="#statuses">Statuses</a>
+        <a href="#tala">Tala's A-Team</a>
+        <a href="#print">Print / PDF</a>
+        <a href="#help">If something looks wrong</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="change">
+        <div class="section-head">
+          <div class="eyebrow">Making a schedule change</div>
+          <h2>Update the Google Sheet</h2>
+          <p>For ordinary schedule changes, use the <strong>Public Schedule</strong> tab. The live website reads that tab automatically.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><p>Open the editable Google Sheet and select <strong>Public Schedule</strong> at the bottom.</p></div>
+          <div class="step"><p>Find the event row, then change the cell that needs updating. Google Sheets saves your edits automatically.</p></div>
+          <div class="step"><p>Wait briefly—published-feed changes may take roughly <strong>1–5 minutes</strong> to appear.</p></div>
+          <div class="step"><p>Open the live schedule and refresh the page. Your change should now be visible.</p></div>
+        </div>
+        <div class="callout"><strong>Helpful rule:</strong> One row represents one schedule event. Find that row and edit only the information that changed.</div>
+      </section>
+
+      <section id="fields">
+        <div class="section-head">
+          <div class="eyebrow">Common fields</div>
+          <h2>What the columns mean</h2>
+          <p>You usually only need to change the field that is different. These are the important fields in plain language.</p>
+          <dl class="field-list">
+            <div><dt>Child</dt><dd>Whose event it is.</dd></div>
+            <div><dt>Sport</dt><dd>For example, volleyball, softball, or football.</dd></div>
+            <div><dt>Date</dt><dd>The event date.</dd></div>
+            <div><dt>Event Type</dt><dd>Game, practice, tournament, or another kind of event.</dd></div>
+            <div><dt>Opponent / Event</dt><dd>The opponent or event name.</dd></div>
+            <div><dt>Start Time</dt><dd>When it starts; use TBD if it is not known yet.</dd></div>
+            <div><dt>End Time</dt><dd>When it is expected to end, if known.</dd></div>
+            <div><dt>Home / Away</dt><dd>Whether the event is at home or away.</dd></div>
+            <div><dt>Location</dt><dd>Where the event takes place.</dd></div>
+            <div><dt>Team / Level</dt><dd>The team, grade, or level.</dd></div>
+            <div><dt>Status</dt><dd>Confirmed, Pending, Conditional, or Cancelled.</dd></div>
+            <div><dt>Conditional?</dt><dd>Whether the event depends on a decision or condition.</dd></div>
+            <div><dt>Public Notes</dt><dd>Short information that is safe to show on the public website.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="add">
+        <div class="section-head">
+          <div class="eyebrow">Adding a new event</div>
+          <h2>Copy a similar row</h2>
+          <p>The easiest safe method is to copy or duplicate an existing row that looks similar, then replace its fields with the new event's information.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><p>Choose a similar event for the same child and sport.</p></div>
+          <div class="step"><p>Copy or duplicate that row, then update the date, event type, opponent/event, times, location, and other fields that differ.</p></div>
+          <div class="step"><p>Choose the correct status. If the time is unknown, leave <strong>Start Time</strong> as <strong>TBD</strong> and use <strong>Pending</strong>.</p></div>
+          <div class="step"><p>Wait a few minutes, then refresh the live schedule to check the new event.</p></div>
+        </div>
+      </section>
+
+      <section id="statuses">
+        <div class="section-head">
+          <div class="eyebrow">Statuses and TBD information</div>
+          <h2>Use the status that fits</h2>
+          <p>These statuses help the family understand how certain an event is.</p>
+        </div>
+        <div class="grid">
+          <div class="card"><span class="badge">Confirmed</span><p>The event is set.</p></div>
+          <div class="card"><span class="badge pending">Pending</span><p>The event is expected, but details are not final yet.</p></div>
+          <div class="card"><span class="badge conditional">Conditional</span><p>The event depends on a decision or condition.</p></div>
+          <div class="card"><span class="badge cancelled">Cancelled</span><p>The event will not happen.</p></div>
+        </div>
+        <div class="callout"><strong>TBD is okay:</strong> If the exact time is not known yet, leave the time as <strong>TBD</strong> and keep the event as <strong>Pending</strong>. Change it to the confirmed time and status later.</div>
+      </section>
+
+      <section id="tala">
+        <div class="section-head">
+          <div class="eyebrow">Tala's volleyball</div>
+          <h2>Conditional A-Team events</h2>
+          <p>Tala is in 7th grade. Some volleyball rows are currently conditional because they are A-Team-only.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><p>Until the coaches decide, leave those A-Team-only rows <strong>Conditional</strong>.</p></div>
+          <div class="step"><p>If Tala makes A Team, those events become normal active events. Update the status and any confirmed details.</p></div>
+          <div class="step"><p>If she does not, mark those A-Team-only events <strong>Cancelled</strong>, or disable them using the site's existing data convention.</p></div>
+        </div>
+      </section>
+
+      <section id="privacy">
+        <div class="section-head">
+          <div class="eyebrow">Public vs. private</div>
+          <h2>Choose the right sheet tab</h2>
+        </div>
+        <div class="grid">
+          <div class="card"><h3>Public Schedule</h3><p>This tab feeds the public live website. Only put schedule information here that is okay for anyone with the published website link to see.</p></div>
+          <div class="card"><h3>Private Notes</h3><p>This tab does <strong>not</strong> feed the public website. Use it for private family logistics and notes.</p></div>
+        </div>
+        <div class="callout warning"><strong>Privacy reminder:</strong> Keep private family information out of Public Schedule. Do not make the whole Google Sheet public; ordinary Google sharing permissions are enough.</div>
+      </section>
+
+      <section id="print">
+        <div class="section-head">
+          <div class="eyebrow">Print / PDF</div>
+          <h2>Take the schedule with you</h2>
+          <p>At the bottom of the live website, select <strong>Print / Save PDF</strong> to print a paper copy or save the current schedule as a PDF.</p>
+        </div>
+        <div class="callout"><strong>Because the website is live:</strong> Generate a fresh PDF later whenever you want it to reflect the latest published schedule.</div>
+      </section>
+
+      <section id="help">
+        <div class="section-head">
+          <div class="eyebrow">If something looks wrong</div>
+          <h2>Try these quick checks</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><p>Wait a few minutes for the Google Sheet change to publish.</p></div>
+          <div class="step"><p>Refresh the live schedule page.</p></div>
+          <div class="step"><p>Verify that the row is in the <strong>Public Schedule</strong> tab and that the cells contain the expected information.</p></div>
+          <div class="step"><p>If it still does not appear, contact Roger rather than trying to fix the website.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer><strong>Quick reminder:</strong> Edit the Public Schedule tab, wait 1–5 minutes, then refresh the live schedule.</footer>
+  </div>
+</body>
+</html>

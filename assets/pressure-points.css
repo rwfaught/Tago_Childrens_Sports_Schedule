@@ -1,0 +1,65 @@
+.pressure-groups {
+  display: grid;
+  gap: 12px;
+  padding: 0 20px 20px;
+}
+
+.pressure-group {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent-soft) 34%, transparent);
+}
+
+.pressure-date {
+  padding: 11px 14px;
+  background: #2f3745;
+  color: #fff;
+  font-weight: 800;
+}
+
+.pressure-activities {
+  padding: 9px 14px;
+}
+
+.pressure-activity {
+  overflow-wrap: anywhere;
+  padding: 5px 0;
+  font-size: .91rem;
+}
+
+.pressure-activity + .pressure-activity {
+  border-top: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
+}
+
+@media (max-width: 820px) {
+  .pressure-groups {
+    padding: 0 15px 15px;
+  }
+}
+
+@media print {
+  #schedule-app > section#conflicts,
+  #conflicts {
+    display: block !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+
+  .pressure-groups {
+    padding: 0;
+  }
+
+  .pressure-group {
+    break-inside: avoid;
+    border: 1px solid #bbb;
+    background: #fff;
+  }
+
+  .pressure-date {
+    border-bottom: 1px solid #bbb;
+    background: #eee;
+    color: #111;
+  }
+}
